@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [
+        {
+            "relationshipName": "pro_cate",
+            "otherEntityName": "category",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "categoryId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20180830065745",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "product",
+    "jpaMetamodelFiltering": false,
+    "pagination": "infinite-scroll"
+}
