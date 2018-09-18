@@ -27,6 +27,9 @@ public class Customer {
     @Column(name = "updated_date")
     private Instant updatedDate;
 
+    public Customer() {
+    }
+
     public Customer(Long id, String name, String address, String phone, Instant createdDate, Instant updatedDate) {
         this.id = id;
         this.name = name;

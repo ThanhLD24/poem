@@ -1,0 +1,11 @@
+<p >
+    Detail customer
+</p>
+<div *ngIf="customer" >
+    <p>{{customer.id}}</p>
+    <p>{{customer.name}}</p>
+    <p>{{customer.address}}</p>
+    <p>{{customer.phone}}</p>
+    <p>{{customer.createdDate | date : 'dd/MM/yyyy'}}</p>
+</div>
+

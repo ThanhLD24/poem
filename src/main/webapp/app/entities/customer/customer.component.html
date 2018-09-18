@@ -1,0 +1,38 @@
+<p>
+  Customers
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td>STT</td>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Created Date</td>
+            <td colspan="3">Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of customers; trackBy: trackId">
+            <td></td>
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.address}}</td>
+            <td>{{c.createdDate | date:'medium'}}</td>
+            <td><button type="submit"
+                        [routerLink]="['/customer', c.id, 'view' ]"
+                        class="btn btn-info btn-sm">
+                <fa-icon [icon]="'eye'"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+            </button></td>
+            <td><button type="submit"
+                        [routerLink]="['/customer', c.id, 'edit' ]"
+                        class="btn btn-primary btn-sm">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+            </button></td>
+            <td>Delete</td>
+        </tr>
+    </tbody>
+</table>
